@@ -1,4 +1,7 @@
 <style>
+  body{
+    background: linear-gradient(30deg,rgb(224, 188, 119),rgb(173, 134, 173),rgb(106, 118, 156))
+  }
   .spc{
     margin-top: -16px;
   }
@@ -34,7 +37,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    <div class="py-4" style="margin-top:-24px ">
+    <div class="py-4" style="margin-top:-24px; ">
       <div class="p-5 mb-4 bg-my rounded-3 ">
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold">Restaurant Lists</h1>
@@ -43,7 +46,7 @@
         </div>
       </div>
   
-      <footer class="pt-3 mt-4 text-muted border-top text-center">
+      <footer class="pt-3 mt-4 text-dark border-top text-center ">
        Resto&copy;  2024 
       </footer>
     </div>

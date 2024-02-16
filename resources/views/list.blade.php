@@ -1,3 +1,6 @@
+<style>
+
+</style>
 @extends('layout')
 @section('content')
     <style>
@@ -9,6 +12,14 @@
             font-size: 19px;
         }
 
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        
         .ban:hover {
             color: red;
         }
@@ -35,6 +46,9 @@
 
         .srh:hover {
             color: royalblue
+        }
+        .w-5{
+            display: none;
         }
     </style>
 
@@ -64,10 +78,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+
     <table class="table table-hover shadow p-3 mb-5 bg-body rounded">
         <thead>
             <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Pic</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Address</th>
@@ -80,6 +96,9 @@
                 @if (session('name') == $item->user_name && session('showNav') != false)
                     <tr>
                         <th scope="row">{{ $item->id }}</th>
+                        <td>
+                            <img src="{{ asset('img/' . $item->file) }}" class="img-fluid" alt="">
+                        </td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->email }}</td>
                         <td>{{ $item->address }}</td>
@@ -92,6 +111,9 @@
                 @elseif(session('showNav') != true)
                     <tr>
                         <th scope="row">{{ $item->id }}</th>
+                        <td>
+                            <img src="{{ asset('img/' . $item->file) }}" class="img-fluid" alt="">
+                        </td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->email }}</td>
                         <td>{{ $item->address }}</td>
@@ -103,6 +125,9 @@
                 @else
                     <tr>
                         <th scope="row">{{ $item->id }}</th>
+                        <td>
+                            <img src="{{ asset('img/' . $item->file) }}" class="img-fluid" alt="">
+                        </td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->email }}</td>
                         <td>{{ $item->address }}</td>
@@ -115,7 +140,7 @@
             @endforeach
         </tbody>
     </table>
+    <p class="col-sm-6 d-flex align-item-center">{{ $data->links() }}</p> 
     <script>
-        
     </script>
 @endsection

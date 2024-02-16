@@ -15,11 +15,8 @@ class UserController extends Controller
             'username'=>'required|unique:users',
             'password'=>'required|min:4|max:10',
         ]);
-        $data = new User;
-        $data->name = $req->name;
-        $data->username = $req->username;
-        $data->password = $req->password;
-        $data->save();
+        $data = User::create($req->all());
+       
         return redirect('/login')->with('register',"Successfully Register!! Now You Can Login");
     }
 

@@ -54,4 +54,7 @@ Route::group(['middleware'=>['protectedPage']],function(){
 });
 
 //Search
-Route::post('search/{name}',[RestoController::class,'search']);
+Route::post('/search', [RestoController::class, 'search']);
+
+//multiple image upload
+Route::view('/image','multiple');
