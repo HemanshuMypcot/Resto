@@ -105,6 +105,7 @@
                         <td>
                             <a href="edit/{{ $item->id }}" class="fa fa-edit bg-my-text m-2"></a>
                             <a href="delete/{{ $item->id }}" class="fa fa-trash bg-my-text m-2"></a>
+                            <a href="users/{{ $item->id }}" class="fa fa-users bg-my-text m-2"></a>
                         </td>
                         <td style="font-family: 'Protest Riot', sans-serif;">{{ $item->user_name }}</td>
                     </tr>
@@ -144,3 +145,4 @@
     <script>
     </script>
 @endsection
+
