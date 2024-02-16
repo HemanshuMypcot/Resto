@@ -5,18 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\RegisterRequest;
 
 class UserController extends Controller
 {
-    function Register(Request $req)
+    function Register(RegisterRequest $req)
     {
-        $req->validate([
-            'name'=>'required|min:4|max:40',
-            'username'=>'required|unique:users',
-            'password'=>'required|min:4|max:10',
-        ]);
-        $data = User::create($req->all());
-       
+        $data = User::create($req->all());   
         return redirect('/login')->with('register',"Successfully Register!! Now You Can Login");
     }
 

@@ -121,6 +121,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/add">Add</a>
                         </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="/addEmp">Add Employee</a>
+                        </li>
                     </ul>
                     <a class="btn btn-outline-secondary btn-sm" href="/logout">Logout</a>
                 </div>
@@ -147,6 +150,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/add">Add</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/addEmp">Add Employee</a>
                         </li>
                         
                         <li class="nav-item">

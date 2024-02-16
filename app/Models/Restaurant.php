@@ -9,4 +9,8 @@ class Restaurant extends Model
 {
     use HasFactory;
     protected $fillable = ['name','email','address','file','user_name'];
+    public function employee()
+    {
+        return $this->hasMany(Employee::class,'resto_id');
+    }
 }

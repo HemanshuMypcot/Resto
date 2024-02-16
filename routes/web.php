@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RestoController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,11 @@ Route::group(['middleware'=>['protectedPage']],function(){
 
     //Editing the data
     Route::get("edit/{id}",[RestoController::class,'showEdit']);
+
+    //Add Employeee
+    Route::view('addEmp','AddEmp');
+    Route::get('addEmp',[EmployeeController::class,'list']);
+
 });
 
 //Search
@@ -58,3 +64,12 @@ Route::post('/search', [RestoController::class, 'search']);
 
 //multiple image upload
 Route::view('/image','multiple');
+
+// Add Employee
+Route::post('addEmp',[EmployeeController::class,'add']);
+
+Route::view('listEmp','listEmp');
+Route::get('listEmp',[EmployeeController::class,'showEmployeeDetails']);
+
+
+Route::get('users/{id}',[EmployeeController::class,'showEmployeeName']);
