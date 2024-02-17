@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\LoginRequest;
 
 class UserController extends Controller
 {
@@ -15,12 +16,8 @@ class UserController extends Controller
         return redirect('/login')->with('register',"Successfully Register!! Now You Can Login");
     }
 
-    function login(Request $request)
+    function login(LoginRequest $request)
     {
-        $request->validate([
-            'username'=>'required',
-            'password'=>'required'
-        ]);
         $credentials = [
             'username' => $request->username,
             'password' => $request->password,

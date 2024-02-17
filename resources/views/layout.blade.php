@@ -101,7 +101,7 @@
 
 <body>
     @if (session('showNav'))
-        {{-- {{print_r("navbar");}}    --}}
+
         <nav class="navbar navbar-expand-lg navbar-light bg-my">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">RESTO</a>
@@ -117,6 +117,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/list">List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/listEmp">Employee List</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/add">Add</a>
@@ -131,7 +134,7 @@
         </nav>
         <h3 class="text m-4 " style="font-family: Helvetica">Welcome, <span class="">{{session('name')}}</span></h3>
     @else
-        {{-- {{print_r("no navbar");}} --}}
+        
         <nav class="navbar navbar-expand-lg navbar-light bg-my">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">RESTO</a>
@@ -147,6 +150,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/list">List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/listEmp">Employee List</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/add">Add</a>

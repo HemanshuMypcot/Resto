@@ -72,4 +72,16 @@ Route::view('listEmp','listEmp');
 Route::get('listEmp',[EmployeeController::class,'showEmployeeDetails']);
 
 
-Route::get('users/{id}',[EmployeeController::class,'showEmployeeName']);
+// Route::get('users/{id}',[EmployeeController::class,'showEmployeeName']);
+// routes/web.php
+Route::view('/showEmp','showEmp');
+Route::get('/showEmp/{id}', [EmployeeController::class, 'showEmployeeName']);
+
+//edit Employee
+Route::get('EmpEdit/{id}',[EmployeeController::class,'showEdit']);
+// Route::get('EmpEdit/{id}',[EmployeeController::class,'list1']);
+Route::get('/EmpEdit/{id}',[EmployeeController::class,'showOption']);
+Route::post('EditEmp',[EmployeeController::class,'editEmp']);
+
+//Delete Employee
+Route::get('EmpDelete/{id}',[EmployeeController::class,'DeleteEmp']);
