@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-    <h1>Hemasnhu</h1>
+    <h1>Kaushik</h1>
     @if (session('Error'))
         <div class="alert bg-my alert-dismissible fade show" role="alert">
             <strong>{{ session('Error') }}!</strong>
